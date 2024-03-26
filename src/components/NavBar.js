@@ -1,11 +1,10 @@
-// Navbar.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <nav className="bg-gradient-to-r from-blue-700 to-blue-900 shadow-lg p-4">
-      <div className="container mx-auto">
+    <nav className="bg-gradient-to-r from-blue-500 to-blue-300 shadow-lg py-4">
+      <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center flex-shrink-0 text-white">
             <svg
@@ -20,27 +19,27 @@ function Navbar() {
               />
             </svg>
             <span className="font-semibold text-xl tracking-tight">
-              Home Automation System
+              <strong>Home</strong> Automation System
             </span>
           </div>
           <div className="hidden lg:flex flex-grow justify-end">
             <Link
               to="/"
-              className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium"
+              className="text-white hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium"
             >
-              Home
+              <strong>Home</strong>
             </Link>
             <Link
               to="/dashboard"
-              className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium"
+              className="text-white hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium"
             >
-              Dashboard
+              <strong>Dashboard</strong>
             </Link>
             <Link
               to="/data"
-              className="text-white hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium"
+              className="text-white hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium"
             >
-              Data
+              <strong>Data</strong>
             </Link>
           </div>
         </div>
