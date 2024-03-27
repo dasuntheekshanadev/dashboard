@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav className="bg-gradient-to-r from-blue-500 to-blue-300 shadow-lg py-4">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center flex-shrink-0 text-white">
             <svg
-              className="h-8 w-8 mr-2 fill-current"
+              className="h-8 w-8 mr-2 fill-current lg:hidden"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
+              onClick={toggleMenu}
             >
               <path
                 fillRule="evenodd"
@@ -22,22 +29,25 @@ function Navbar() {
               <strong>Home</strong> Automation System
             </span>
           </div>
-          <div className="hidden lg:flex flex-grow justify-end">
+          <div className={`lg:flex flex-grow justify-end items-center ${isMenuOpen ? 'block' : 'hidden'}`}>
             <Link
               to="/"
               className="text-white hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium"
+              onClick={toggleMenu}
             >
               <strong>Home</strong>
             </Link>
             <Link
               to="/dashboard"
               className="text-white hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium"
+              onClick={toggleMenu}
             >
               <strong>Dashboard</strong>
             </Link>
             <Link
               to="/about"
               className="text-white hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium"
+              onClick={toggleMenu}
             >
               <strong>About Us</strong>
             </Link>
