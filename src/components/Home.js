@@ -73,12 +73,13 @@ const Home = () => {
               </p>
               <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
               Let me introduce our outstanding team. They're a group of highly skilled individuals with a passion for excellence.
+              Click here to see our Team.
               </p>
               <button
                 onClick={handleAbout}
                 className="block w-full px-4 py-2 mt-2 text-sm font-semibold text-white bg-blue-700 rounded-md hover:bg-blue-800 focus:outline-none focus:ring focus:ring-blue-200"
               >
-                About
+                Go To About Us
               </button>
             </div>
           </a>
@@ -98,12 +99,13 @@ const Home = () => {
               </h5>
               <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
               Take a glance at our comprehensive charts and graphs, meticulously curated by our cutting-edge home automation system.
+              You can see your past data here.
               </p>
               <button
                 onClick={handleChart}
                 className="block w-full px-4 py-2 mt-2 text-sm font-semibold text-white bg-blue-700 rounded-md hover:bg-blue-800 focus:outline-none focus:ring focus:ring-blue-200"
               >
-                Chart
+                Go To Chart
               </button>
             </div>
           </a>
