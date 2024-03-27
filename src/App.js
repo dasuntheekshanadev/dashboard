@@ -5,6 +5,7 @@ import Dashboard from './components/Dashboard';
 import Data from './components/Data';
 import NavBar from './components/NavBar';
 import AboutUs from './components/AboutUs';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/about" element={<AboutUs />} />
         </Routes>
+        <Footer />
       </div>
     </BrowserRouter>
   );
