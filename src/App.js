@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Dashboard from './components/Dashboard';
 import Data from './components/Data';
 import NavBar from './components/NavBar';
+import AboutUs from './components/AboutUs';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/data" element={<Data />} />
+          <Route path="/about" element={<AboutUs />} />
         </Routes>
       </div>
     </BrowserRouter>

@@ -36,10 +36,10 @@ function Navbar() {
               <strong>Dashboard</strong>
             </Link>
             <Link
-              to="/data"
+              to="/about"
               className="text-white hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium"
             >
-              <strong>Data</strong>
+              <strong>About Us</strong>
             </Link>
           </div>
         </div>
