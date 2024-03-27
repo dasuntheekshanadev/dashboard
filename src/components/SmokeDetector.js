@@ -34,7 +34,7 @@ const SmokeLevelDisplay = () => {
   }, []);
 
   const progressBarWidth = smokeLevel ? `${(smokeLevel / 2000) * 100}%` : '0%';
-  const progressBarColor = smokeLevel ? (smokeLevel >= 1800 ? 'bg-red-500' : 'bg-green-500') : 'bg-gray-300';
+  const progressBarColor = smokeLevel ? (smokeLevel >= 2300 ? 'bg-red-500' : 'bg-green-500') : 'bg-gray-300';
 
   return (
     <div>
