@@ -6,7 +6,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   const handleGetStarted = () => {
-    navigate("/dashboard"); // Redirects to the dashboard component
+    navigate("/dashboard"); 
   };
 
   return (
