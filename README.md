@@ -44,8 +44,7 @@ git clone https://github.com/yourusername/home-automation-system.git
 
 ## Contributors
 
-- John Doe (@johndoe)
-- Jane Smith (@janesmith)
+- Dasun Theekshana (@LST_The_Rapper)
 
 ## License
 
