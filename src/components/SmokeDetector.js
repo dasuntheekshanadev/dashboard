@@ -33,9 +33,15 @@ const SmokeLevelDisplay = () => {
     };
   }, []);
 
+  const progressBarWidth = smokeLevel ? `${(smokeLevel / 2000) * 100}%` : '0%';
+  const progressBarColor = smokeLevel ? (smokeLevel >= 1800 ? 'bg-red-500' : 'bg-green-500') : 'bg-gray-300';
+
   return (
     <div>
       <h2>Smoke Level</h2>
+      <div className="w-full bg-gray-300 rounded overflow-hidden">
+        <div className={`h-4 ${progressBarColor}`} style={{ width: progressBarWidth }} />
+      </div>
       {smokeLevel !== null ? (
         <div>
           <p>Current smoke level: {smokeLevel}</p>

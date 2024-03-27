@@ -1,9 +1,28 @@
 import React from 'react';
+import { FiThermometer, FiAlertCircle, FiActivity } from 'react-icons/fi';
+import { useNavigate } from 'react-router-dom';
 import DHT from './DHT';
 import MotionSensor from './MotionSensor';
 import SmokeLevelDisplay from './SmokeDetector';
 
 const Dashboard = () => {
+  const navigate = useNavigate();
+
+  const handleDHT = () => {
+    // Navigate to DHT page
+    navigate('/dht');
+  };
+
+  const handleMotionSensor = () => {
+    // Navigate to Motion Sensor page
+    navigate('/motion-sensor');
+  };
+
+  const handleSmokeDetector = () => {
+    // Navigate to Smoke Detector page
+    navigate('/smoke-detector');
+  };
+
   return (
     <div className="bg-gradient-to-r from-gray-600 to-blue-900 min-h-screen flex flex-col text-white">
       <div className="py-8 px-4 text-center">
@@ -12,26 +31,41 @@ const Dashboard = () => {
       </div>
       <div className="flex-grow flex flex-col justify-center items-center">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <DHT />
-            <p className="text-white mt-4 text-xl font-semibold">DHT Sensor</p>
-            {/* Additional details */}
-            <p className="text-gray-300">Temperature: 25°C</p>
-            <p className="text-gray-300">Humidity: 50%</p>
+          <div className="max-w-sm bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col justify-between">
+            <div>
+              <div className="text-white text-xl font-semibold flex items-center mb-4">
+                <FiThermometer className="mr-2" /> DHT Sensor
+              </div>
+              <DHT />
+              <div className="mt-4 text-gray-300">
+                <p>Temperature: 25°C</p>
+                <p>Humidity: 50%</p>
+              </div>
+            </div>
           </div>
-          <div className="bg-gray-800 rounded-lg p-6">
-            <MotionSensor />
-            <p className="text-white mt-4 text-xl font-semibold">Motion Sensor</p>
-            {/* Additional details */}
-            <p className="text-gray-300">Motion Detected: Yes</p>
-            <p className="text-gray-300">Last Triggered: </p>
+          <div className="max-w-sm bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col justify-between">
+            <div>
+              <div className="text-white text-xl font-semibold flex items-center mb-4">
+                <FiActivity className="mr-2" /> Motion Sensor
+              </div>
+              <MotionSensor />
+              <div className="mt-4 text-gray-300">
+                <p>Motion Detected: Yes</p>
+                <p>Last Triggered: 4.30 P.M</p>
+              </div>
+            </div>
           </div>
-          <div className="bg-gray-800 rounded-lg p-6">
-            <SmokeLevelDisplay />
-            <p className="text-white mt-4 text-xl font-semibold">Smoke Detector</p>
-            {/* Additional details */}
-            <p className="text-gray-300">Smoke Level: Low</p>
-            <p className="text-gray-300">Status: Normal</p>
+          <div className="max-w-sm bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col justify-between">
+            <div>
+              <div className="text-white text-xl font-semibold flex items-center mb-4">
+                <FiAlertCircle className="mr-2" /> Smoke Detector
+              </div>
+              <SmokeLevelDisplay />
+              <div className="mt-4 text-gray-300">
+                <p>Smoke Level: Low</p>
+                <p>Status: Normal</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
