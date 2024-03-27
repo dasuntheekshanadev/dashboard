@@ -1,6 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import backgroundImage from "../assets/back.jpg";
+import cardImage1 from "../assets/cardImage1.png"; 
+import ChartImage1 from "../assets/vis.jpg"
+import DashImage1 from "../assets/dashboard.jpg"
 
 const Home = () => {
   const navigate = useNavigate();
@@ -9,41 +12,102 @@ const Home = () => {
     navigate("/dashboard"); 
   };
 
+  const handleAbout = () => {
+    navigate("/about");
+  };
+
+  const handleChart = () => {
+    navigate("/chart");
+  };
+
   return (
     <div
       className="min-h-screen bg-cover bg-center flex flex-col justify-center items-center animate-fadeIn"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <h1 className="text-4xl font-bold mb-4 text-gray-800 animate-bounce">
+      <h1 className="text-4xl font-bold mb-4 text-white-800 animate-bounce">
         Welcome to Your Smart Home Hub
       </h1>
-      <div
-        className="p-8 rounded-lg max-w-lg shadow-lg animate-slideIn"
-        style={{
-          background:
-            "linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6))",
-        }}
-      >
-        <p className="text-lg text-gray-700 mb-6">
-          Manage and control your smart home devices with ease. Get real-time
-          insights and automate your home tasks.
-        </p>
-        <ul className="list-disc list-inside text-gray-700 mb-6">
-          <li className="mb-2">
-            Monitor temperature, humidity, and energy usage.
-          </li>
-          <li className="mb-2">
-            Control lighting, heating, and cooling systems.
-          </li>
-          <li className="mb-2">Set schedules and automate tasks.</li>
-          <li className="mb-2">Receive notifications and alerts.</li>
-        </ul>
-        <button
-          onClick={handleGetStarted}
-          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-        >
-          Go to Dashboard
-        </button>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="max-w-sm bg-white rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
+          <a href="/dashboard">
+            <div>
+              <img
+                className="rounded-t-lg object-cover w-full h-48"
+                src={DashImage1} // Use appropriate image source
+                alt=""
+              />
+            </div>
+            <div className="p-5">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Go to Dashboard
+              </h5>
+              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              Experience the ultimate convenience and control with our sophisticated home automation system.
+              Where control is effortless and possibilities are endless.
+              </p>
+              <button
+                onClick={handleGetStarted}
+                className="block w-full px-4 py-2 mt-2 text-sm font-semibold text-white bg-blue-700 rounded-md hover:bg-blue-800 focus:outline-none focus:ring focus:ring-blue-200"
+              >
+                Go to Dashboard
+              </button>
+            </div>
+          </a>
+        </div>
+        <div className="max-w-sm bg-white  rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
+          <a href="/about">
+            <div>
+              <img
+                className="rounded-t-lg object-cover w-full h-48"
+                src={cardImage1} // Use appropriate image source
+                alt=""
+              />
+            </div>
+            <div className="p-5">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                About Us
+              </h5>
+              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              
+              </p>
+              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              Let me introduce our outstanding team. They're a group of highly skilled individuals with a passion for excellence.
+              </p>
+              <button
+                onClick={handleAbout}
+                className="block w-full px-4 py-2 mt-2 text-sm font-semibold text-white bg-blue-700 rounded-md hover:bg-blue-800 focus:outline-none focus:ring focus:ring-blue-200"
+              >
+                About
+              </button>
+            </div>
+          </a>
+        </div>
+        <div className="max-w-sm bg-white  rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
+          <a href="/chart">
+            <div>
+              <img
+                className="rounded-t-lg object-cover w-full h-48"
+                src={ChartImage1} // Use appropriate image source
+                alt=""
+              />
+            </div>
+            <div className="p-5">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                View Charts
+              </h5>
+              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              Take a glance at our comprehensive charts and graphs, meticulously curated by our cutting-edge home automation system.
+              </p>
+              <button
+                onClick={handleChart}
+                className="block w-full px-4 py-2 mt-2 text-sm font-semibold text-white bg-blue-700 rounded-md hover:bg-blue-800 focus:outline-none focus:ring focus:ring-blue-200"
+              >
+                Chart
+              </button>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   );

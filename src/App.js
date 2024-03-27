@@ -6,6 +6,7 @@ import Data from './components/Data';
 import NavBar from './components/NavBar';
 import AboutUs from './components/AboutUs';
 import Footer from './components/Footer';
+import Chart from './components/Chart';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/chart" element={<Chart />} />
         </Routes>
         <Footer />
       </div>
