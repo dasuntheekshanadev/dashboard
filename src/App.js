@@ -7,6 +7,7 @@ import NavBar from './components/NavBar';
 import AboutUs from './components/AboutUs';
 import Footer from './components/Footer';
 import Chart from './components/Chart';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/chart" element={<Chart />} />
         </Routes>
         <Footer />
+        <SpeedInsights />
       </div>
     </BrowserRouter>
   );
