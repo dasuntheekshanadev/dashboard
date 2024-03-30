@@ -19,7 +19,7 @@
                 />
               </svg>
               <span className="font-semibold text-xl tracking-tight">
-                <strong>Home</strong> Automation System
+                <strong>Eldery</strong> Monitoring System
               </span>
             </div>
             <div className="hidden lg:flex flex-grow justify-end">

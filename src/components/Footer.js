@@ -17,10 +17,10 @@ function Footer() {
             />
           </svg>
           <span className="font-semibold text-sm tracking-tight">
-            <strong>Home</strong> Automation System
+            <strong>Home</strong> Eldery Monitoring System
           </span>
         </div>
-        <p className="text-xs">&copy; 2024 Home Automation System. All rights reserved.</p>
+        <p className="text-xs">&copy; 2024 Eldery Monitoring System. All rights reserved.</p>
       </div>
     </footer>
   );

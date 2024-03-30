@@ -26,7 +26,7 @@ const Home = () => {
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <h1 className="text-4xl font-bold mb-4 text-white-800 animate-bounce">
-        Welcome to Your Smart Home Hub
+        Welcome to Our Eldery Monitoring System
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div className="max-w-sm bg-white rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
@@ -43,7 +43,7 @@ const Home = () => {
                 Go to Dashboard
               </h5>
               <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              Experience the ultimate convenience and control with our sophisticated home automation system.
+              Experience the ultimate convenience and control with our sophisticated monitoring System.
               Where control is effortless and possibilities are endless.
               </p>
               <button
