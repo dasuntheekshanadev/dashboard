@@ -1,7 +1,7 @@
 import React from 'react';
 import { FiThermometer, FiAlertCircle, FiActivity } from 'react-icons/fi';
+import FirebaseDataDisplay from './FirebaseDataDisplay';
 import { useNavigate } from 'react-router-dom';
-import DHT from './DHT';
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -23,26 +23,7 @@ const Dashboard = () => {
 
   return (
     <div className="bg-gradient-to-r from-gray-600 to-blue-900 min-h-screen flex flex-col text-white">
-      <div className="py-8 px-4 text-center">
-        <h1 className="text-3xl font-bold mb-2">Welcome to Eldery Monitoring System</h1>
-        <p className="text-lg">Monitor your home environment with real-time data from various sensors.</p>
-      </div>
-      <div className="flex-grow flex flex-col justify-center items-center">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="max-w-sm bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col justify-between">
-            <div>
-              <div className="text-white text-xl font-semibold flex items-center mb-4">
-                <FiThermometer className="mr-2" /> DHT Sensor
-              </div>
-              <DHT />
-              <div className="mt-4 text-gray-300">
-                <p>Temperature: 25°C</p>
-                <p>Humidity: 50%</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        <FirebaseDataDisplay />
     </div>
   );
 }

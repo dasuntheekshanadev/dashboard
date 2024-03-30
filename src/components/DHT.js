@@ -14,7 +14,7 @@ const DHT = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const dbRef = firebase.database().ref('DHT_11');
+        const dbRef = firebase.database().ref('DHT');
         dbRef.on('value', (snapshot) => {
           const data = snapshot.val();
           if (data) {
@@ -31,7 +31,7 @@ const DHT = () => {
 
     return () => {
       // Cleanup function to remove the listener when component unmounts
-      const dbRef = firebase.database().ref('DHT_11');
+      const dbRef = firebase.database().ref('DHT');
       dbRef.off();
     };
   }, []);
