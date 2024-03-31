@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/database';
 import firebaseConfig from '../config/firebaseConfig';
+import { IoAlertCircleSharp } from 'react-icons/io5'; // Import an icon library for alerts
 
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
@@ -11,6 +12,7 @@ const FirebaseDataDisplay = () => {
   const [humidity, setHumidity] = useState(null);
   const [temperature, setTemperature] = useState(null);
   const [heartRate, setHeartRate] = useState({ IR: null, BPM: null, AvgBPM: null });
+  const [fallDetectionStatus, setFallDetectionStatus] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,6 +33,13 @@ const FirebaseDataDisplay = () => {
             BPM: data.BPM,
             AvgBPM: data.AvgBPM
           });
+        }
+      });
+
+      dbRef.child('FallDetection').on('value', (snapshot) => {
+        const fallStatus = snapshot.val();
+        if (fallStatus !== null && fallStatus !== undefined) {
+          setFallDetectionStatus(fallStatus ? "Fall detected" : "No fall detected");
         }
       });
     };
@@ -77,6 +86,15 @@ const FirebaseDataDisplay = () => {
             <div>
               <p className="text-gray-600">Average BPM:</p>
               <p className="text-gray-600">{heartRate.AvgBPM}</p>
+            </div>
+            <div className="mb-2 flex items-center">
+              <p className="text-gray-600">Fall Detection:</p>
+              {fallDetectionStatus && (
+                <div className="flex items-center ml-2">
+                  <IoAlertCircleSharp className="text-red-500 mr-1" /> 
+                  <p className="text-red-500">{fallDetectionStatus}</p>
+                </div>
+              )}
             </div>
           </div>
         </div>
