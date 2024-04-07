@@ -60,31 +60,31 @@ const FirebaseDataDisplay = () => {
           <div className="mb-6">
             <p className="text-gray-600 mb-2">Environment Data:</p>
             <div className="mb-2 flex justify-between items-center">
-              <p className="text-gray-600">Humidity:</p>
-              <p className="text-gray-600">{humidity}</p>
+              <p className="text-white-600">Humidity:</p>
+              <p className="text-white-600">{humidity}</p>
             </div>
             <div className="flex justify-between items-center">
-              <p className="text-gray-600">Temperature:</p>
-              <p className="text-gray-600">{temperature}</p>
+              <p className="text-white-600">Temperature:</p>
+              <p className="text-white-600">{temperature}</p>
             </div>
           </div>
 
           <div className="border-t border-gray-300 pt-6">
             <h2 className="text-lg font-semibold mt-6 mb-4">Health Data:</h2>
             <div className="mb-2">
-              <p className="text-gray-600">Infrared (IR) Sensor:</p>
-              <p className="text-gray-600">{heartRate.IR}</p>
+              <p className="text-white-600">Infrared (IR) Sensor:</p>
+              <p className="text-white-600">{heartRate.IR}</p>
             </div>
             <div className="mb-2">
-              <p className="text-gray-600">Beats Per Minute (BPM):</p>
-              <p className="text-gray-600">{heartRate.BPM}</p>
+              <p className="text-white-600">Beats Per Minute (BPM):</p>
+              <p className="text-white-600">{heartRate.BPM}</p>
             </div>
             <div>
-              <p className="text-gray-600">Average BPM:</p>
-              <p className="text-gray-600">{heartRate.AvgBPM}</p>
+              <p className="text-white-600">Average BPM:</p>
+              <p className="text-white-600">{heartRate.AvgBPM}</p>
             </div>
             <div className="mb-2 flex items-center">
-              <p className="text-gray-600">Fall Detection:</p>
+              <p className="text-white-600">Fall Detection:</p>
               {fallDetectionStatus && (
                 <div className="flex items-center ml-2">
                   <IoAlertCircleSharp className="text-red-500 mr-1" /> 
