@@ -61,15 +61,11 @@ const FirebaseDataDisplay = () => {
             <p className="text-gray-600 mb-2">Environment Data:</p>
             <div className="mb-2 flex justify-between items-center">
               <p className="text-gray-600">Humidity:</p>
-              <div className="w-1/2 bg-gray-200 rounded-full overflow-hidden">
-                <div className="h-2 bg-blue-500" style={{ width: `${humidity}%` }}></div>
-              </div>
+              <p className="text-gray-600">{humidity}</p>
             </div>
             <div className="flex justify-between items-center">
               <p className="text-gray-600">Temperature:</p>
-              <div className="w-1/2 bg-gray-200 rounded-full overflow-hidden">
-                <div className="h-2 bg-blue-500" style={{ width: `${temperature}%` }}></div>
-              </div>
+              <p className="text-gray-600">{temperature}</p>
             </div>
           </div>
 
